@@ -1,6 +1,5 @@
 const SITE_CONFIG = {
-  // Change this if your GitHub username is different.
-  githubUrl: "https://github.com/vaishbengeri",
+  githubUrl: "https://github.com/vaishnavb",
 };
 
 const setGitHubLinks = () => {
