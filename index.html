@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101827" />
+    <meta
+      name="description"
+      content="Portfolio website for Vaishnav Bengeri, DevSecOps engineer focused on secure cloud systems, automation, and resilient infrastructure."
+    />
+    <title>Vaishnav Bengeri | DevSecOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand-mark">VB</span>
+        <span>Vaishnav</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="github-chip" id="githubTopLink" href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">
+        <span>GitHub</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.8-.25.8-.56v-2.1c-3.26.71-3.95-1.4-3.95-1.4-.53-1.35-1.3-1.72-1.3-1.72-1.07-.72.08-.7.08-.7 1.18.08 1.8 1.21 1.8 1.21 1.05 1.8 2.76 1.28 3.43.98.11-.76.41-1.28.75-1.57-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.5.12-3.1 0 0 .99-.32 3.23 1.2a11.1 11.1 0 0 1 5.88 0c2.24-1.52 3.22-1.2 3.22-1.2.65 1.6.24 2.8.12 3.1.75.82 1.2 1.87 1.2 3.15 0 4.5-2.74 5.48-5.36 5.77.42.37.8 1.1.8 2.2v3.27c0 .31.21.67.81.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">DevSecOps / Cloud Security / Automation</p>
+          <h1>
+            I build secure systems that move fast without breaking trust.
+          </h1>
+          <p class="hero-text">
+            I’m Vaishnav Bengeri, a DevSecOps engineer focused on resilient cloud platforms,
+            security automation, and developer-friendly infrastructure.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary magnetic" href="#work">View work</a>
+            <a class="button secondary magnetic" id="githubHeroLink" href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">GitHub profile</a>
+          </div>
+        </div>
+
+        <div class="hero-card reveal delay-1" aria-label="Profile summary card">
+          <div class="terminal-topbar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <h2>Vaishnav Bengeri</h2>
+            <p class="muted">DevSecOps Engineer</p>
+            <div class="status-grid">
+              <div><span>Focus</span><strong>Secure delivery</strong></div>
+              <div><span>Mode</span><strong>Automating</strong></div>
+              <div><span>Signal</span><strong>Cloud native</strong></div>
+              <div><span>Risk</span><strong>Reduced</strong></div>
+            </div>
+            <pre><code>pipeline.security()
+  .scan()
+  .harden()
+  .ship();</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell split-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Security-minded engineering with production pragmatism.</h2>
+        </div>
+        <div class="about-content reveal delay-1">
+          <p>
+            I enjoy turning complex security and infrastructure requirements into clean,
+            repeatable systems. My work sits at the intersection of cloud architecture,
+            CI/CD, compliance, observability, and developer experience.
+          </p>
+          <div class="stats">
+            <div><strong>∞</strong><span>automation mindset</span></div>
+            <div><strong>0</strong><span>trust-by-default assumptions</span></div>
+            <div><strong>24/7</strong><span>resilience focus</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects worth highlighting.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="card-orb"></div>
+            <span class="project-tag">Platform Security</span>
+            <h3>Secure CI/CD Blueprint</h3>
+            <p>Reusable pipeline patterns for scanning, policy checks, secret detection, and release gates.</p>
+            <a href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">View on GitHub →</a>
+          </article>
+          <article class="project-card reveal delay-1">
+            <div class="card-orb"></div>
+            <span class="project-tag">Cloud</span>
+            <h3>Infrastructure Guardrails</h3>
+            <p>Cloud posture controls designed to catch drift, reduce risk, and keep teams shipping.</p>
+            <a href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">View on GitHub →</a>
+          </article>
+          <article class="project-card reveal delay-2">
+            <div class="card-orb"></div>
+            <span class="project-tag">Automation</span>
+            <h3>Security Telemetry Hub</h3>
+            <p>Dashboards and alerting workflows that convert noisy findings into actionable signals.</p>
+            <a href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">View on GitHub →</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="stack" class="section-shell stack-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Stack</p>
+          <h2>Tools and areas I work across.</h2>
+        </div>
+        <div class="marquee reveal delay-1" aria-label="Technology list">
+          <div class="marquee-track">
+            <span>AWS</span><span>Azure</span><span>Kubernetes</span><span>Docker</span><span>Terraform</span><span>GitHub Actions</span><span>Python</span><span>Bash</span><span>SIEM</span><span>SAST</span><span>DAST</span><span>Secrets</span>
+            <span>AWS</span><span>Azure</span><span>Kubernetes</span><span>Docker</span><span>Terraform</span><span>GitHub Actions</span><span>Python</span><span>Bash</span><span>SIEM</span><span>SAST</span><span>DAST</span><span>Secrets</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Have something secure, scalable, or weirdly complex to build?</h2>
+        <p>Let’s connect through GitHub and turn it into a clean system.</p>
+        <div class="hero-actions centered">
+          <a class="button primary magnetic" id="githubContactLink" href="https://github.com/vaishbengeri" target="_blank" rel="noreferrer">Open GitHub</a>
+          <a class="button secondary magnetic" href="mailto:vaish.bengeri@ves.solutions">Email me</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Vaishnav Bengeri. Built for GitHub Pages.</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
