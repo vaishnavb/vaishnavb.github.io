@@ -8,10 +8,6 @@ const setGitHubLinks = () => {
     const link = document.getElementById(id);
     if (link) link.href = SITE_CONFIG.githubUrl;
   });
-
-  document.querySelectorAll(".project-card a").forEach((link) => {
-    link.href = SITE_CONFIG.githubUrl;
-  });
 };
 
 const setYear = () => {
