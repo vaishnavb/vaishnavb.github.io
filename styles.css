@@ -575,25 +575,125 @@ code {
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
 
+.logo-card {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.logo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.18), transparent 34%);
+}
+
+.logo-card img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 86px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.32));
+}
+
 .ves-logo {
   background:
-    linear-gradient(135deg, rgba(16, 185, 129, 0.88), rgba(34, 211, 238, 0.56)),
+    linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(34, 211, 238, 0.2)),
     rgba(15, 23, 42, 0.85);
-  font-size: 2.5rem;
 }
 
 .ibm-logo {
   background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.18) 0 4px, transparent 4px 9px),
-    linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(15, 23, 42, 0.86));
-  font-size: 2.45rem;
+    linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(15, 23, 42, 0.9)),
+    rgba(15, 23, 42, 0.85);
 }
 
 .nasdaq-logo {
   background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.9), rgba(124, 58, 237, 0.72)),
+    linear-gradient(135deg, rgba(34, 211, 238, 0.26), rgba(124, 58, 237, 0.16)),
     rgba(15, 23, 42, 0.85);
-  font-size: 1.65rem;
+}
+
+.resume-section {
+  padding-top: 60px;
+}
+
+.resume-panel {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.035));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+}
+
+.resume-panel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 28px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.resume-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.resume-panel summary strong,
+.resume-panel summary small {
+  display: block;
+}
+
+.resume-panel summary strong {
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.resume-panel summary small {
+  margin-top: 8px;
+  color: var(--muted-2);
+  font-size: 0.95rem;
+}
+
+.summary-indicator {
+  display: grid;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  border-radius: 999px;
+  color: var(--accent-2);
+  background: rgba(34, 211, 238, 0.08);
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: transform 200ms ease;
+}
+
+.resume-panel[open] .summary-indicator {
+  transform: rotate(45deg);
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 28px 24px;
+}
+
+.resume-frame {
+  display: block;
+  width: calc(100% - 56px);
+  height: min(78vh, 920px);
+  margin: 0 28px 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.72);
 }
 
 .stack-section {
@@ -746,6 +846,21 @@ code {
 
   .company-logo {
     min-height: 108px;
+  }
+
+  .resume-panel summary {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .resume-actions {
+    padding: 0 22px 22px;
+  }
+
+  .resume-frame {
+    width: calc(100% - 44px);
+    height: 620px;
+    margin: 0 22px 22px;
   }
 
   .site-footer {
