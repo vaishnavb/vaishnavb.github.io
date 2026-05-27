@@ -600,8 +600,8 @@ code {
 
 .ves-logo {
   background:
-    linear-gradient(135deg, rgba(16, 185, 129, 0.18), rgba(34, 211, 238, 0.2)),
-    rgba(15, 23, 42, 0.85);
+    linear-gradient(135deg, rgba(226, 232, 240, 0.34), rgba(34, 211, 238, 0.3)),
+    rgba(51, 65, 85, 0.94);
 }
 
 .ibm-logo {
@@ -612,8 +612,8 @@ code {
 
 .nasdaq-logo {
   background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.26), rgba(124, 58, 237, 0.16)),
-    rgba(15, 23, 42, 0.85);
+    linear-gradient(135deg, rgba(226, 232, 240, 0.36), rgba(34, 211, 238, 0.34)),
+    rgba(51, 65, 85, 0.94);
 }
 
 .resume-section {
