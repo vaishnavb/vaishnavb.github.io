@@ -120,10 +120,19 @@ a {
   width: 38px;
   height: 38px;
   border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
   font-size: 0.85rem;
+  overflow: hidden;
   box-shadow: 0 12px 28px rgba(124, 58, 237, 0.38);
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .nav-links {
@@ -190,11 +199,11 @@ p {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 900px;
   margin-bottom: 24px;
-  font-size: clamp(2.85rem, 5.8vw, 5.9rem);
-  line-height: 0.92;
-  letter-spacing: -0.075em;
+  font-size: clamp(3rem, 5.35vw, 5.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.065em;
 }
 
 h2 {
@@ -310,19 +319,6 @@ h3 {
   background: rgba(2, 6, 23, 0.58);
 }
 
-.profile-photo {
-  display: block;
-  width: 132px;
-  height: 132px;
-  margin: 0 0 22px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 28px;
-  object-fit: cover;
-  object-position: top center;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
-}
-
 .prompt {
   color: var(--accent-3);
   font-family: "JetBrains Mono", monospace;
@@ -409,7 +405,7 @@ code {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 34px;
 }
@@ -451,25 +447,6 @@ code {
   background: rgba(34, 211, 238, 0.07);
 }
 
-.project-media {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 10px;
-  margin-bottom: 22px;
-}
-
-.project-media img {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  object-fit: cover;
-  object-position: top left;
-  background: rgba(2, 6, 23, 0.5);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
-}
-
 .compact-list {
   position: relative;
   z-index: 1;
@@ -492,6 +469,73 @@ code {
   margin-top: 20px;
   color: #c4b5fd;
   font-weight: 800;
+}
+
+.signalforge-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  gap: 32px;
+  align-items: start;
+  margin-top: 34px;
+  min-height: auto;
+}
+
+.signalforge-feature:hover {
+  transform: translateY(-4px);
+}
+
+.feature-copy,
+.signalforge-media {
+  position: relative;
+  z-index: 1;
+}
+
+.signalforge-feature h3 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.95;
+}
+
+.signalforge-feature p {
+  font-size: 1.12rem;
+}
+
+.signalforge-media {
+  display: grid;
+  gap: 16px;
+}
+
+.signalforge-media img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  object-fit: cover;
+  object-position: top left;
+  background: rgba(2, 6, 23, 0.5);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.3);
+}
+
+.roadmap-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.roadmap-grid span {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  border-radius: 16px;
+  color: var(--text);
+  background: rgba(15, 23, 42, 0.66);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
 }
 
 .experience-grid {
@@ -531,25 +575,125 @@ code {
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
 
+.logo-card {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.logo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.55;
+  background: radial-gradient(circle at 20% 15%, rgba(255, 255, 255, 0.18), transparent 34%);
+}
+
+.logo-card img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-height: 86px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.32));
+}
+
 .ves-logo {
   background:
-    linear-gradient(135deg, rgba(16, 185, 129, 0.88), rgba(34, 211, 238, 0.56)),
-    rgba(15, 23, 42, 0.85);
-  font-size: 2.5rem;
+    linear-gradient(135deg, rgba(226, 232, 240, 0.34), rgba(34, 211, 238, 0.3)),
+    rgba(51, 65, 85, 0.94);
 }
 
 .ibm-logo {
   background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.18) 0 4px, transparent 4px 9px),
-    linear-gradient(135deg, rgba(37, 99, 235, 0.92), rgba(15, 23, 42, 0.86));
-  font-size: 2.45rem;
+    linear-gradient(135deg, rgba(37, 99, 235, 0.22), rgba(15, 23, 42, 0.9)),
+    rgba(15, 23, 42, 0.85);
 }
 
 .nasdaq-logo {
   background:
-    linear-gradient(135deg, rgba(34, 211, 238, 0.9), rgba(124, 58, 237, 0.72)),
-    rgba(15, 23, 42, 0.85);
-  font-size: 1.65rem;
+    linear-gradient(135deg, rgba(226, 232, 240, 0.36), rgba(34, 211, 238, 0.34)),
+    rgba(51, 65, 85, 0.94);
+}
+
+.resume-section {
+  padding-top: 60px;
+}
+
+.resume-panel {
+  margin-top: 34px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.035));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  overflow: hidden;
+}
+
+.resume-panel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 28px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.resume-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.resume-panel summary strong,
+.resume-panel summary small {
+  display: block;
+}
+
+.resume-panel summary strong {
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.resume-panel summary small {
+  margin-top: 8px;
+  color: var(--muted-2);
+  font-size: 0.95rem;
+}
+
+.summary-indicator {
+  display: grid;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  border-radius: 999px;
+  color: var(--accent-2);
+  background: rgba(34, 211, 238, 0.08);
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: transform 200ms ease;
+}
+
+.resume-panel[open] .summary-indicator {
+  transform: rotate(45deg);
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0 28px 24px;
+}
+
+.resume-frame {
+  display: block;
+  width: calc(100% - 56px);
+  height: min(78vh, 920px);
+  margin: 0 28px 28px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.72);
 }
 
 .stack-section {
@@ -640,6 +784,7 @@ code {
   .hero,
   .split-section,
   .project-grid,
+  .signalforge-feature,
   .experience-card {
     grid-template-columns: 1fr;
   }
@@ -650,6 +795,10 @@ code {
 
   .stats {
     grid-template-columns: 1fr;
+  }
+
+  .signalforge-feature {
+    gap: 24px;
   }
 }
 
@@ -676,10 +825,14 @@ code {
   }
 
   h1 {
-    font-size: clamp(3rem, 17vw, 5rem);
+    font-size: clamp(2.7rem, 13vw, 4.4rem);
   }
 
   .status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap-grid {
     grid-template-columns: 1fr;
   }
 
@@ -693,6 +846,21 @@ code {
 
   .company-logo {
     min-height: 108px;
+  }
+
+  .resume-panel summary {
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .resume-actions {
+    padding: 0 22px 22px;
+  }
+
+  .resume-frame {
+    width: calc(100% - 44px);
+    height: 620px;
+    margin: 0 22px 22px;
   }
 
   .site-footer {

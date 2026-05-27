@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -24,7 +25,9 @@
 
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Go to top">
-        <span class="brand-mark">VB</span>
+        <span class="brand-mark">
+          <img src="assets/vaishnav-profile.png" alt="" />
+        </span>
         <span>Vaishnav</span>
       </a>
 
@@ -32,6 +35,7 @@
         <a href="#about">About</a>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
+        <a href="#resume">Resume</a>
         <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -47,7 +51,7 @@
         <div class="hero-copy reveal">
           <p class="eyebrow">AI Platform / DevSecOps / Cloud Security</p>
           <h1>
-            Secure platforms for AI and mission software.
+            I build secure platforms for AI and mission-critical software.
           </h1>
           <p class="hero-text">
             I’m Vaishnav Bengeri, a platform infrastructure and DevSecOps engineer building reliable delivery
@@ -64,7 +68,6 @@
             <span></span><span></span><span></span>
           </div>
           <div class="terminal-body">
-            <img class="profile-photo" src="assets/vaishnav-profile.png" alt="Vaishnav Bengeri" />
             <p><span class="prompt">$</span> whoami</p>
             <h2>Vaishnav Bengeri</h2>
             <p class="muted">Platform Infrastructure Engineer</p>
@@ -107,26 +110,39 @@
           <p class="eyebrow">Selected work</p>
           <h2>Current projects and production systems.</h2>
         </div>
-        <div class="project-grid">
-          <article class="project-card feature-card reveal">
-            <div class="card-orb"></div>
-            <span class="project-tag">AI Trading Research</span>
-            <div class="project-media" aria-label="SignalForge AI screenshots">
-              <img src="assets/signalforge-dashboard.png" alt="SignalForge AI dashboard showing paper trade operations and risk metrics" />
-              <img src="assets/signalforge-ai-analysis.png" alt="SignalForge AI approval analysis view with model reasoning" />
-            </div>
+        <article class="project-card signalforge-feature reveal">
+          <div class="card-orb"></div>
+          <div class="feature-copy">
+            <span class="project-tag">Flagship AI Trading Platform</span>
             <h3>SignalForge AI</h3>
             <p>
-              Intraday options research platform that connects scanner automation, simulated paper trades, outcome
-              tracking, risk dashboards, and AI-assisted trade analysis.
+              SignalForge AI is my flagship options research platform: a live intraday workflow for scanner automation,
+              paper-trade simulation, outcome tracking, risk dashboards, and AI-assisted trade review.
             </p>
             <ul class="compact-list">
-              <li>Built an inference layer with tool calling for structured trade review.</li>
-              <li>Hosted on Google Cloud Run with GitHub Actions CI/CD.</li>
-              <li>Developing toward agentic automation for research, monitoring, and autonomous workflow execution.</li>
+              <li>Built the inference layer with tool calling for structured trade analysis and approval reasoning.</li>
+              <li>Hosted on Google Cloud Run with GitHub Actions CI/CD for repeatable delivery.</li>
+              <li>Expanding toward agentic automation that can scan, gather context, decide, replay, evaluate, and improve over time.</li>
+              <li>Actively planning GPU optimization and cost-efficiency work for scalable inference experiments.</li>
             </ul>
+            <div class="roadmap-grid" aria-label="SignalForge AI roadmap">
+              <span>Postgres inference traces</span>
+              <span>Scanner → context → decisions</span>
+              <span>Historical replay mode</span>
+              <span>Eval harness + PR scorecards</span>
+              <span>Versioned prompts and agents</span>
+              <span>Dashboard trace viewer</span>
+              <span>Alternative-model evals</span>
+              <span>Self-hosted model cost tests</span>
+            </div>
             <a href="https://github.com/vaishnavb/SignalForge-AI" target="_blank" rel="noreferrer">View on GitHub →</a>
-          </article>
+          </div>
+          <div class="signalforge-media" aria-label="SignalForge AI screenshots">
+            <img src="assets/signalforge-dashboard.png" alt="SignalForge AI dashboard showing paper trade operations and risk metrics" />
+            <img src="assets/signalforge-ai-analysis.png" alt="SignalForge AI approval analysis view with model reasoning" />
+          </div>
+        </article>
+        <div class="project-grid">
           <article class="project-card reveal delay-1">
             <div class="card-orb"></div>
             <span class="project-tag">Python / Options</span>
@@ -167,7 +183,9 @@
         </div>
         <div class="experience-grid">
           <article class="experience-card reveal">
-            <div class="company-logo ves-logo" aria-label="VES logo">VES</div>
+            <div class="company-logo logo-card ves-logo" aria-label="VES logo">
+              <img src="assets/logo-ves.png" alt="VES" />
+            </div>
             <div>
               <span class="project-tag">Current</span>
               <h3>VES — Artillery Execution Suite</h3>
@@ -183,7 +201,9 @@
             </div>
           </article>
           <article class="experience-card reveal delay-1">
-            <div class="company-logo ibm-logo" aria-label="IBM logo">IBM</div>
+            <div class="company-logo logo-card ibm-logo" aria-label="IBM logo">
+              <img src="assets/logo-ibm.png" alt="IBM" />
+            </div>
             <div>
               <span class="project-tag">DHS / FEMA Risk MAP</span>
               <h3>IBM</h3>
@@ -198,7 +218,9 @@
             </div>
           </article>
           <article class="experience-card reveal delay-2">
-            <div class="company-logo nasdaq-logo" aria-label="Nasdaq logo">Nasdaq</div>
+            <div class="company-logo logo-card nasdaq-logo" aria-label="Nasdaq logo">
+              <img src="assets/logo-nasdaq.png" alt="Nasdaq" />
+            </div>
             <div>
               <span class="project-tag">Infrastructure Automation</span>
               <h3>Nasdaq</h3>
@@ -213,6 +235,31 @@
             </div>
           </article>
         </div>
+      </section>
+
+      <section id="resume" class="section-shell resume-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Resume</p>
+          <h2>The fuller version, tucked neatly away.</h2>
+        </div>
+        <details class="resume-panel reveal delay-1">
+          <summary>
+            <span>
+              <strong>Want the details?</strong>
+              <small>Expand for the PDF version of my background, experience, and technical scope.</small>
+            </span>
+            <span class="summary-indicator" aria-hidden="true">+</span>
+          </summary>
+          <div class="resume-actions">
+            <a class="button primary magnetic" href="assets/vaishnav-bengeri-resume.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+            <a class="button secondary magnetic" href="assets/vaishnav-bengeri-resume.pdf" download>Download resume</a>
+          </div>
+          <iframe
+            class="resume-frame"
+            src="assets/vaishnav-bengeri-resume.pdf#view=FitH"
+            title="Vaishnav Bengeri resume PDF"
+          ></iframe>
+        </details>
       </section>
 
       <section id="stack" class="section-shell stack-section">
