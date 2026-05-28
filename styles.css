@@ -102,7 +102,8 @@ a {
 }
 
 .brand,
-.github-chip,
+.header-actions,
+.social-chip,
 .nav-links {
   display: flex;
   align-items: center;
@@ -132,7 +133,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 16%;
+  transform: scale(1.34);
+  transform-origin: center 20%;
 }
 
 .nav-links {
@@ -142,26 +145,30 @@ a {
 }
 
 .nav-links a,
-.github-chip {
+.social-chip {
   border-radius: 999px;
   padding: 10px 14px;
   transition: 200ms ease;
 }
 
 .nav-links a:hover,
-.github-chip:hover {
+.social-chip:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.07);
 }
 
-.github-chip {
+.header-actions {
+  gap: 8px;
+}
+
+.social-chip {
   gap: 8px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.05);
   font-weight: 700;
 }
 
-.github-chip svg {
+.social-chip svg {
   width: 18px;
   fill: currentColor;
 }
@@ -813,11 +820,11 @@ code {
   }
 
   .brand span:last-child,
-  .github-chip span {
+  .social-chip span {
     display: none;
   }
 
-  .github-chip {
+  .social-chip {
     width: 42px;
     height: 42px;
     justify-content: center;

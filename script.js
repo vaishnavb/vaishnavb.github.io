@@ -1,5 +1,6 @@
 const SITE_CONFIG = {
   githubUrl: "https://github.com/vaishnavb",
+  linkedinUrl: "https://www.linkedin.com/in/vaishnav-bengeri",
 };
 
 const setGitHubLinks = () => {
@@ -7,6 +8,14 @@ const setGitHubLinks = () => {
   links.forEach((id) => {
     const link = document.getElementById(id);
     if (link) link.href = SITE_CONFIG.githubUrl;
+  });
+};
+
+const setLinkedInLinks = () => {
+  const links = ["linkedinTopLink", "linkedinContactLink"];
+  links.forEach((id) => {
+    const link = document.getElementById(id);
+    if (link) link.href = SITE_CONFIG.linkedinUrl;
   });
 };
 
@@ -146,6 +155,7 @@ const initParticles = () => {
 };
 
 setGitHubLinks();
+setLinkedInLinks();
 setYear();
 revealOnScroll();
 initCursorGlow();
