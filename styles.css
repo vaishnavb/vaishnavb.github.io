@@ -133,7 +133,9 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 16%;
+  transform: scale(1.34);
+  transform-origin: center 20%;
 }
 
 .nav-links {
